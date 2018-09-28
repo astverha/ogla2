@@ -287,7 +287,7 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
     // rodeSleutels bevat alle rode sleutels in level order
 
     //root maken
-    RZWboom boom(make_unique<RZWknoop<Sleutel> >(sleutels[0]));
+    (*this) = move(make_unique<RZWknoop<Sleutel> >(sleutels[0]));
 
     int j = 0;
     for (int i = 1; i < sleutels.size(); ++i) {
@@ -299,7 +299,7 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
 
         RZWknoop<Sleutel>* ouder;
         RZWboom<Sleutel>* plaats;
-        boom.zoek(sleutels[i], ouder, plaats);
+        this->zoek(sleutels[i], ouder, plaats);
 
         if(sleutels[i] > ouder->sleutel){
             ouder->rechts = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));
@@ -310,7 +310,7 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
         }
     }
 
-    boom.schrijf(cout);
+    this->schrijf(cout);
 };
 
 
