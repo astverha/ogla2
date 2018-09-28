@@ -53,9 +53,9 @@ class RZWboom : public unique_ptr<RZWknoop<Sleutel>>{
 public:
     using unique_ptr<RZWknoop<Sleutel>>::unique_ptr;
 
-    RZWboom(string filename);
+    RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>& rodeSleutels);
 
-    RZWboom(unique_ptr<RZWknoop<Sleutel>>&& a);                                           ;
+    RZWboom(unique_ptr<RZWknoop<Sleutel>>&& a);
     void roteer(bool naarlinks);
     void inorder(std::function<void(const RZWknoop<Sleutel>&)> bezoek) const;
     //schrijf als tekst
@@ -283,7 +283,34 @@ void print(vector<string> &v){
 
 template<class Sleutel>
 RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>& rodeSleutels) {
+    // sleutels bevat alles sleutels in level order
+    // rodeSleutels bevat alle rode sleutels in level order
 
+    //root maken
+    RZWboom boom(make_unique<RZWknoop<Sleutel> >(sleutels[0]));
+
+    int j = 0;
+    for (int i = 1; i < sleutels.size(); ++i) {
+        RZWkleur kleur = zwart;
+        if(sleutels[i] == rodeSleutels[j]){
+            kleur = rood;
+            j++;
+        }
+
+        RZWknoop<Sleutel>* ouder;
+        RZWboom<Sleutel>* plaats;
+        boom.zoek(sleutels[i], ouder, plaats);
+
+        if(sleutels[i] > ouder->sleutel){
+            ouder->rechts = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));
+            ouder->rechts->kleur = kleur;
+        } else {
+            ouder->links = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));
+            ouder->links->kleur = kleur;
+        }
+    }
+
+    boom.schrijf(cout);
 };
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Tarsdj/Desktop/AlgoII/Rood-Zwarte-Bomen
+# Install script for directory: /Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Rood-Zwarte-Bomen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Tarsdj/Desktop/AlgoII/Rood-Zwarte-Bomen/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Rood-Zwarte-Bomen/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
