@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Tarsdj/Desktop/AlgoII/Rood-Zwarte-Bomen/main.cpp
+iostream
+-
+rzwboom14.h
+/Users/Tarsdj/Desktop/AlgoII/Rood-Zwarte-Bomen/rzwboom14.h
+
+/Users/Tarsdj/Desktop/AlgoII/Rood-Zwarte-Bomen/rzwboom14.h
+cstdlib
+-
+iostream
+-
+queue
+-
+memory
+-
+functional
+-
+fstream
+-
+sstream
+-
+vector
+-
+
