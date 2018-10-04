@@ -12,6 +12,5 @@ int main() {
     std::cout << (boom.repOK() ? "juiste boom" : "") << std::endl;
 
 
-
     return 0;
 }

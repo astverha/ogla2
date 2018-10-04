@@ -67,7 +67,6 @@ public:
     void tekenAlsBinaireBoom(const char * bestandsnaam) const;
     string tekenrecBinair(ostream& uit,int&nullteller) const;
     bool repOKZoekboom() const;
-    bool repOK() const;
     int geefDiepte() const;
     RZWkleur geefKleur() const;
 
@@ -96,6 +95,11 @@ void RZWboom<Sleutel>::inorder(std::function<void(const RZWknoop<Sleutel>&)> bez
         bezoek(**this);
         (*this)->rechts.inorder(bezoek);
     };
+}
+
+template<class Sleutel>
+RZWkleur RZWboom<Sleutel>::geefKleur() const{
+    return (*this)->kleur;
 }
 
 template <class Sleutel>
@@ -197,7 +201,7 @@ string RZWboom<Sleutel>::tekenrecBinair(ostream& uit,int&nullteller ) const{
 
 template <class Sleutel>
 bool RZWboom<Sleutel>::repOKZoekboom() const{
-    Sleutel* vorige=0;//houdt ref naar eerder gezien sleutel bij.
+    Sleutel* vorige;//houdt ref naar eerder gezien sleutel bij.
     bool oke=true;
     inorder([&vorige,&oke](const RZWknoop<Sleutel>& knoop){
         if (vorige && knoop.sleutel < *vorige){
@@ -217,38 +221,27 @@ bool RZWboom<Sleutel>::repOKZoekboom() const{
 }
 
 template <class Sleutel>
-RZWkleur RZWboom<Sleutel>::geefKleur() const{
-    return (*this)->kleur;
-}
-
-template <class Sleutel>
-bool RZWboom<Sleutel>::repOK() const{
-    Sleutel* vorige=0;//houdt ref naar eerder gezien sleutel bij.
+bool RZWboom<Sleutel>::repOk() const{
+    Sleutel* vorige; //houdt ref naar eerder gezien sleutel bij.
     bool oke=true;
     inorder([&vorige,&oke](const RZWknoop<Sleutel>& knoop){
         if (vorige && knoop.sleutel < *vorige){
             throw "Verkeerde volgorde\n";
-        }
+        };
         if (knoop.ouder && knoop.ouder->links.get()!=&knoop &&  knoop.ouder->rechts.get()!=&knoop){
             std::ostringstream fout;
             fout<<"Ongeldige ouderpointer bij knoop "<<knoop.sleutel<<"\n";
             fout<<"wijst naar "<<knoop.ouder->sleutel<<"\n";
             throw fout;
             return;
-        }
-        if (knoop.links && knoop.kleur == rood && knoop.links->kleur == rood) {
-            std::ostringstream fout;
-            fout<<"2 rode knopen na elkaar bij knoop "<<knoop.sleutel<<"\n";
-            fout<<" en "<<knoop.links->sleutel<<"\n";
-            throw fout;
-        }
-        if (knoop.rechts && knoop.kleur == rood && knoop.rechts->kleur == rood) {
-            std::ostringstream fout;
-            fout<<"2 rode knopen na elkaar bij knoop "<<knoop.sleutel<<"\n";
-            fout<<" en "<<knoop.rechts->sleutel<<"\n";
-            throw fout;
-        }
+        };
         //...nog tests?
+        // testen op kleur
+        
+
+        // testen op zwarte diepte
+
+
         return;
     });
     return oke;
@@ -341,9 +334,12 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
         RZWknoop<Sleutel>* ouder;
         RZWboom<Sleutel>* plaats;
         this->zoek(sleutels[i], ouder, plaats);
+        
+        //std::cout << plaats << std::endl;
+        
+        //eigenlijk kan je de knoop gewoon op "plaats" zetten, maar
+        // door CLION hebben we dit niet gedaan
 
-
-        //Eigenlijk moet je niet checken voor links of rechts
         if(sleutels[i] > ouder->sleutel){
             ouder->rechts = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));
             ouder->rechts->kleur = kleur;
