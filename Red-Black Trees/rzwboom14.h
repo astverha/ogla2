@@ -97,6 +97,11 @@ void RZWboom<Sleutel>::inorder(std::function<void(const RZWknoop<Sleutel>&)> bez
     };
 }
 
+template<class Sleutel>
+RZWkleur RZWboom<Sleutel>::geefKleur() const{
+    return (*this)->kleur;
+}
+
 template <class Sleutel>
 void RZWboom<Sleutel>::schrijf(ostream& os) const{
     inorder([&os](const RZWknoop<Sleutel>& knoop){
@@ -232,7 +237,7 @@ bool RZWboom<Sleutel>::repOk() const{
         };
         //...nog tests?
         // testen op kleur
-
+        
 
         // testen op zwarte diepte
 
@@ -316,6 +321,7 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
 
     //root maken
     (*this) = move(make_unique<RZWknoop<Sleutel> >(sleutels[0]));
+    (*this)->kleur = zwart;
 
     int j = 0;
     for (int i = 1; i < sleutels.size(); ++i) {
@@ -328,6 +334,11 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
         RZWknoop<Sleutel>* ouder;
         RZWboom<Sleutel>* plaats;
         this->zoek(sleutels[i], ouder, plaats);
+        
+        //std::cout << plaats << std::endl;
+        
+        //eigenlijk kan je de knoop gewoon op "plaats" zetten, maar
+        // door CLION hebben we dit niet gedaan
 
         if(sleutels[i] > ouder->sleutel){
             ouder->rechts = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));

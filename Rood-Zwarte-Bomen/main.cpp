@@ -7,6 +7,8 @@ int main() {
 
     RZWboom boom(sleutels, rodeSleutels);
 
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "\nTree ok? ";
+
+    std::cout << (boom.repOk() ? "true" : "false") << std::endl;
     return 0;
 }
