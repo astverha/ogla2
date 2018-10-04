@@ -6,7 +6,12 @@ int main() {
     vector<int> rodeSleutels = {15, 4, 8};
 
     RZWboom boom(sleutels, rodeSleutels);
+    string filename = "boom.dot";
+    boom.tekenAlsBinaireBoom(filename.c_str());
 
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << (boom.repOK() ? "juiste boom" : "") << std::endl;
+
+
+
     return 0;
 }
