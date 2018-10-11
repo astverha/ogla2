@@ -119,7 +119,7 @@ void RZWboom<Sleutel>::schrijf(ostream& os) const{
 template <class Sleutel>
 void RZWboom<Sleutel>::tekenAls234Boom(const char * bestandsnaam) const{
     ofstream uit(bestandsnaam);
-    assert(uit);
+    //assert(uit);
     int nullteller=0;//nullknopen moeten een eigen nummer krijgen.
     int knoop34teller=0;//3-knopen en 4-knopen worden ook genummerd
     uit<<"digraph {\n";
@@ -167,7 +167,7 @@ string RZWboom<Sleutel>::tekenrec234(ostream& uit,int&nullteller ,int&knoop34tel
 template <class Sleutel>
 void RZWboom<Sleutel>::tekenAlsBinaireBoom(const char * bestandsnaam) const{
     ofstream uit(bestandsnaam);
-    assert(uit);
+    //assert(uit);
     int nullteller=0;//nullknopen moeten een eigen nummer krijgen.
     uit<<"digraph {\n";
     this->tekenrecBinair(uit,nullteller);
