@@ -342,7 +342,8 @@ RZWboom<Sleutel>::RZWboom(const vector<Sleutel>& sleutels, const vector<Sleutel>
         RZWboom<Sleutel>* plaats;
         this->zoek(sleutels[i], ouder, plaats);
 
-        //Eigenlijk moet je niet checken voor links of rechts
+        // Eigenlijk moet je niet checken voor links of rechts, maar gewoon toevoegen op "plaats"
+        // Dit werkt, daarom laat ik het staan. Berbe en Dwight hebben de juiste oplossing.
         if(sleutels[i] > ouder->sleutel){
             ouder->rechts = (make_unique<RZWknoop<Sleutel> >(sleutels[i]));
             ouder->rechts->kleur = kleur;
