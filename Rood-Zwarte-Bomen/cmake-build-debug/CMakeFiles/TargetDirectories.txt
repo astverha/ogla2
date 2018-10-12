@@ -1,3 +1,0 @@
-/Users/tarsdj/Desktop/ogla2/Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/tarsdj/Desktop/ogla2/Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/tarsdj/Desktop/ogla2/Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles/Rood_Zwarte_Bomen.dir

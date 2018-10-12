@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Rood-Zwarte-Bomen/main.cpp
+iostream
+-
+rzwboom14.h
+/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Rood-Zwarte-Bomen/rzwboom14.h
+
+/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Rood-Zwarte-Bomen/rzwboom14.h
+cstdlib
+-
+iostream
+-
+queue
+-
+memory
+-
+functional
+-
+fstream
+-
+sstream
+-
+vector
+-
+
