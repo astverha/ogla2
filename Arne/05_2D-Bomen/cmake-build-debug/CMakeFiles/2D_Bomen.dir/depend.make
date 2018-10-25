@@ -1,2 +1,2 @@
-# Empty dependencies file for Rood_Zwarte_Bomen.
+# Empty dependencies file for 2D_Bomen.
 # This may be replaced when dependencies are built.

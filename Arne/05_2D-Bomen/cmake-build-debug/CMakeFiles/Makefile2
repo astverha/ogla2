@@ -59,45 +59,45 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/01_Rood-Zwarte-Bomen"
+CMAKE_SOURCE_DIR = "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/2D-Bomen"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/01_Rood-Zwarte-Bomen/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/2D-Bomen/cmake-build-debug"
 
 #=============================================================================
-# Target rules for target CMakeFiles/Rood_Zwarte_Bomen.dir
+# Target rules for target CMakeFiles/2D_Bomen.dir
 
 # All Build rule for target.
-CMakeFiles/Rood_Zwarte_Bomen.dir/all:
-	$(MAKE) -f CMakeFiles/Rood_Zwarte_Bomen.dir/build.make CMakeFiles/Rood_Zwarte_Bomen.dir/depend
-	$(MAKE) -f CMakeFiles/Rood_Zwarte_Bomen.dir/build.make CMakeFiles/Rood_Zwarte_Bomen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/01_Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Rood_Zwarte_Bomen"
-.PHONY : CMakeFiles/Rood_Zwarte_Bomen.dir/all
+CMakeFiles/2D_Bomen.dir/all:
+	$(MAKE) -f CMakeFiles/2D_Bomen.dir/build.make CMakeFiles/2D_Bomen.dir/depend
+	$(MAKE) -f CMakeFiles/2D_Bomen.dir/build.make CMakeFiles/2D_Bomen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/2D-Bomen/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target 2D_Bomen"
+.PHONY : CMakeFiles/2D_Bomen.dir/all
 
 # Include target in all.
-all: CMakeFiles/Rood_Zwarte_Bomen.dir/all
+all: CMakeFiles/2D_Bomen.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Rood_Zwarte_Bomen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/01_Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Rood_Zwarte_Bomen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/01_Rood-Zwarte-Bomen/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Rood_Zwarte_Bomen.dir/rule
+CMakeFiles/2D_Bomen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/2D-Bomen/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/2D_Bomen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/2D-Bomen/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/2D_Bomen.dir/rule
 
 # Convenience name for target.
-Rood_Zwarte_Bomen: CMakeFiles/Rood_Zwarte_Bomen.dir/rule
+2D_Bomen: CMakeFiles/2D_Bomen.dir/rule
 
-.PHONY : Rood_Zwarte_Bomen
-
-# clean rule for target.
-CMakeFiles/Rood_Zwarte_Bomen.dir/clean:
-	$(MAKE) -f CMakeFiles/Rood_Zwarte_Bomen.dir/build.make CMakeFiles/Rood_Zwarte_Bomen.dir/clean
-.PHONY : CMakeFiles/Rood_Zwarte_Bomen.dir/clean
+.PHONY : 2D_Bomen
 
 # clean rule for target.
-clean: CMakeFiles/Rood_Zwarte_Bomen.dir/clean
+CMakeFiles/2D_Bomen.dir/clean:
+	$(MAKE) -f CMakeFiles/2D_Bomen.dir/build.make CMakeFiles/2D_Bomen.dir/clean
+.PHONY : CMakeFiles/2D_Bomen.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/2D_Bomen.dir/clean
 
 .PHONY : clean
 
