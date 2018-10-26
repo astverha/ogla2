@@ -16,6 +16,8 @@ using std::unique_ptr;
 using std::cerr;
 using std::pair;
 using std::string;
+
+using namespace std;
 /**********************************************************************
 
    Class: Boom2D en Knoop2D
@@ -40,6 +42,9 @@ protected:
     Boom2D* zoek(const punt2& punt);
     //preconditie: boom is niet leeg;
     void zoekdichtsteRec(const punt2&zoekpunt,punt2&beste,int& bezochteknopen,int niveau);
+private:
+    // 1 = y; 0 is x;
+    int dimensie = 1;
 };
 
 
@@ -122,5 +127,35 @@ Boom2D& Knoop2D:: geefKind(bool linkerkind){
 /**
  * MIJN TOEVOEGINGEN, groetjes Arnerd.
  */
+
+Boom2D* voegToeRec(Boom2D& root, const punt2& punt, int depth){
+
+    if(!root){
+        return (Boom2D) make_unique<Knoop2D(punt)>;
+    }
+
+    int dim = depth % 2;
+
+    // x dimension
+    if(dim == 0){
+        if(punt.x < root->x){
+            (*root->geefKind(true)) = move(voegToeRec(root->geefKind(true), punt, depth+1));
+        } else {
+            (*root->geefKind(false)) = move(voegToeRec(root->geefKind(false), punt, depth+1));
+        }
+    } else {
+        if(punt.y < root->y){
+            (*root->geefKind(true)) = move(voegToeRec(root->geefKind(true), punt, depth+1));
+        } else {
+            (*root->geefKind(false)) = move(voegToeRec(root->geefKind(false), punt, depth+1));
+        }
+    }
+
+    return &root;
+}
+
+void Boom2D::voegtoe(const punt2& punt){
+    (*this) = move(voegToeRec(this, punt, 0));
+}
 
 #endif

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/arneverhaeghe/Documents/IW 4/IW 4/Semester 1/Algoritmen II/git/ogla2/Arne/05_2D_Bomen/main.cpp
+iostream
+-
+
