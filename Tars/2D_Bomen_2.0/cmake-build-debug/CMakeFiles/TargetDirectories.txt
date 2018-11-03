@@ -1,0 +1,3 @@
+/Users/tarsdj/Desktop/ogla2/Tars/2D_Bomen_2.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/tarsdj/Desktop/ogla2/Tars/2D_Bomen_2.0/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tarsdj/Desktop/ogla2/Tars/2D_Bomen_2.0/cmake-build-debug/CMakeFiles/2D_Bomen_2_0.dir
