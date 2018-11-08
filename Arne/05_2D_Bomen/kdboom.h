@@ -128,34 +128,7 @@ Boom2D& Knoop2D:: geefKind(bool linkerkind){
  * MIJN TOEVOEGINGEN, groetjes Arnerd.
  */
 
-Boom2D* voegToeRec(Boom2D& root, const punt2& punt, int depth){
-
-    if(!root){
-        return (Boom2D) make_unique<Knoop2D(punt)>;
-    }
-
-    int dim = depth % 2;
-
-    // x dimension
-    if(dim == 0){
-        if(punt.x < root->x){
-            (*root->geefKind(true)) = move(voegToeRec(root->geefKind(true), punt, depth+1));
-        } else {
-            (*root->geefKind(false)) = move(voegToeRec(root->geefKind(false), punt, depth+1));
-        }
-    } else {
-        if(punt.y < root->y){
-            (*root->geefKind(true)) = move(voegToeRec(root->geefKind(true), punt, depth+1));
-        } else {
-            (*root->geefKind(false)) = move(voegToeRec(root->geefKind(false), punt, depth+1));
-        }
-    }
-
-    return &root;
-}
-
-void Boom2D::voegtoe(const punt2& punt){
-    (*this) = move(voegToeRec(this, punt, 0));
-}
+// zoek implemeteren (recursive)
+// voeg toe fixen met zoek
 
 #endif
