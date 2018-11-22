@@ -22,16 +22,16 @@ public:
         capaciteit=_capaciteit;
     }
 
-friend ostream& operator<<(ostream& os, const Pad& p){
-    os<<"Capaciteit= "<<p.capaciteit<<" :: ";
-    if (p.size() > 0){
-        os<<p[0];
+    friend ostream& operator<<(ostream& os, const Pad& p){
+        os<<"Capaciteit= "<<p.capaciteit<<" :: ";
+        if (p.size() > 0){
+            os<<p[0];
+        }
+        for (int i=1; i<p.size(); i++ ){
+            os<<"->"<<p[i];
+        }
+        os<<"\n";
     }
-    for (int i=1; i<p.size(); i++ ){
-        os<<"->"<<p[i];
-    }
-    os<<"\n";
-}
 
 protected:
     T capaciteit;
@@ -128,55 +128,110 @@ void Vergrotendpadzoeker<T>::foo(int t,int x, Pad<T>& p){
 template <class T>//T = takdata
 class Stroomnetwerk:public GraafMetTakdata<GERICHT, T >{
 public:
-//leeg netwerk; alleen aantal knopen en van en naar gegeven.
-Stroomnetwerk(int grootte, int _van, int _naar):
+    //leeg netwerk; alleen aantal knopen en van en naar gegeven.
+    Stroomnetwerk(int grootte, int _van, int _naar):
                     Graaf<GERICHT>(grootte),GraafMetTakdata<GERICHT, T>(grootte),van(_van),naar(_naar){};
 
-//Copyconstructor. Let op: Graaf<GERICHT>(gr) moet toegevoegd,
-//anders roept de copyconstructor van GraafMetTakdata de defaultconstructor
-//van Graaf op en krijgen we een lege graaf.
-Stroomnetwerk(const GraafMetTakdata<GERICHT, T>& gr, int _van, int _naar):
+    //Copyconstructor. Let op: Graaf<GERICHT>(gr) moet toegevoegd,
+    //anders roept de copyconstructor van GraafMetTakdata de defaultconstructor
+    //van Graaf op en krijgen we een lege graaf.
+    Stroomnetwerk(const GraafMetTakdata<GERICHT, T>& gr, int _van, int _naar):
                     Graaf<GERICHT>(gr),GraafMetTakdata<GERICHT, T>(gr),van(_van),naar(_naar){};
 
-Stroomnetwerk(const Stroomnetwerk<T>& gr):
+    Stroomnetwerk(const Stroomnetwerk<T>& gr):
                     Graaf<GERICHT>(gr),GraafMetTakdata<GERICHT, T>(gr),van(gr.van),naar(gr.naar){};
 
-Stroomnetwerk(Stroomnetwerk<T>&& gr):Stroomnetwerk(0,0,0){
-    swap(this->burenlijsten,gr.burenlijsten);
-    swap(this->vrijgekomenVerbindingsnummers,gr.vrijgekomenVerbindingsnummers);
-    std::swap(this->hoogsteVerbindingsnummer,gr.hoogsteVerbindingsnummer);
-    swap(this->takdatavector,gr.takdatavector);
-    std::swap(this->van,gr.van);
-    std::swap(this->naar,gr.naar);
-};
+    Stroomnetwerk(Stroomnetwerk<T>&& gr):Stroomnetwerk(0,0,0){
+        swap(this->burenlijsten,gr.burenlijsten);
+        swap(this->vrijgekomenVerbindingsnummers,gr.vrijgekomenVerbindingsnummers);
+        std::swap(this->hoogsteVerbindingsnummer,gr.hoogsteVerbindingsnummer);
+        swap(this->takdatavector,gr.takdatavector);
+        std::swap(this->van,gr.van);
+        std::swap(this->naar,gr.naar);
+    };
 
-Stroomnetwerk<T> geefStroom(){
-    Stroomnetwerk<T> oplossing(this->aantalKnopen(),van,naar);
-    Stroomnetwerk<T> restnetwerk(*this);
-    Vergrotendpadzoeker<T> vg(restnetwerk);
-    Pad<T> vergrotendpad=vg.geefVergrotendPad();
-    while(vergrotendpad.size() !=0 ){
-        restnetwerk-=vergrotendpad;
-        oplossing+=vergrotendpad;
-        vergrotendpad=vg.geefVergrotendPad();
+    Stroomnetwerk<T> geefStroom(){
+        Stroomnetwerk<T> oplossing(this->aantalKnopen(),van,naar);
+        Stroomnetwerk<T> restnetwerk(*this);
+        Vergrotendpadzoeker<T> vg(restnetwerk);
+        Pad<T> vergrotendpad=vg.geefVergrotendPad();
+        while(vergrotendpad.size() !=0 ){
+            restnetwerk-=vergrotendpad;                 // dit geeft een fout ==> -= overloaden
+            oplossing+=vergrotendpad;                   // dit geeft een fout ==> += overloaden
+            vergrotendpad=vg.geefVergrotendPad();
+        }
+        return oplossing;
     }
-    return oplossing;
-}
 
-void vergrootTak(int start, int eind, T delta){
-        int taknr=this->verbindingsnummer(start,eind);
-        if (taknr==-1)
-            taknr=this->voegVerbindingToe(start,eind,delta);
-        else
-            this->takdatavector[taknr]+=delta;
-}
-T geefCapaciteit(){
-    T som=0;
-    for (typename GraafMetTakdata<GERICHT,T>::Burenlijst::const_iterator it=this->burenlijsten[van].begin();
-                it!=this->burenlijsten[van].end();it++)
-        som+=this->takdatavector[it->second];
-    return som;
-}
+    Stroomnetwerk<T>& operator+=(Pad<T>& vergrPad){
+        for (int i = 1; i < vergrPad.size(); i++)
+        {
+            int van = vergrPad[i - 1];
+            int naar = vergrPad[i];
+
+            T toe_te_voegen_stroom = vergrPad.geefCapaciteit();
+
+            if (this->verbindingsnummer(naar, van) == -1)
+            {
+                this->voegVerbindingToe(van, naar, toe_te_voegen_stroom);
+            }
+            else
+            {
+                T* terugstroom = this->geefTakdata(naar, van);
+
+                if (*terugstroom >= toe_te_voegen_stroom)
+                {
+                    *terugstroom -= toe_te_voegen_stroom;
+                }
+                else
+                {
+                    toe_te_voegen_stroom -= *terugstroom;
+                    *terugstroom = 0;
+                    this->vergrootTak(van, naar, toe_te_voegen_stroom);
+                }
+            }
+        }
+        return *this;
+    }
+
+    Stroomnetwerk<T>& operator-=(Pad<T>& vergrPad){
+        for (int i = 1; i < vergrPad.size(); i++)
+        {
+            int van = vergrPad[i - 1];
+            int naar = vergrPad[i];
+
+            assert(this->verbindingsnummer(van, naar) != -1);
+
+            T* heenstroom = this->geefTakdata(van, naar);
+
+            assert(*heenstroom >= vergrPad.geefCapaciteit());
+            *heenstroom -= vergrPad.geefCapaciteit();
+
+            if (*heenstroom == 0)
+            {
+                this->verwijderVerbinding(van, naar);
+            }
+
+            this->vergrootTak(naar, van, vergrPad.geefCapaciteit());
+        }
+        return *this;
+    }
+
+    void vergrootTak(int start, int eind, T delta){
+            int taknr=this->verbindingsnummer(start,eind);
+            if (taknr==-1)
+                taknr=this->voegVerbindingToe(start,eind,delta);
+            else
+                this->takdatavector[taknr]+=delta;
+    }
+
+    T geefCapaciteit(){
+        T som=0;
+        for (typename GraafMetTakdata<GERICHT,T>::Burenlijst::const_iterator it=this->burenlijsten[van].begin();
+                    it!=this->burenlijsten[van].end();it++)
+            som+=this->takdatavector[it->second];
+        return som;
+    }
 
     int van,naar;
 protected:

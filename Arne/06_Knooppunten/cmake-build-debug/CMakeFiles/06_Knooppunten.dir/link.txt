@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/06_Knooppunten.dir/stroomnet17.cpp.o  -o 06_Knooppunten 

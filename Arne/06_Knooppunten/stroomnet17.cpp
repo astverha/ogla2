@@ -20,5 +20,6 @@ int main(){
     sn.teken("sn.dot");
     Stroomnetwerk<int> oplossing=sn.geefStroom();
     oplossing.teken("oplossing.dot");
+    std::cout << "capaciteit: " << oplossing.geefCapaciteit() << std::endl;
     assert(oplossing.geefCapaciteit()==13);
 }
