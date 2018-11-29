@@ -1,10 +1,7 @@
 #include "stroomnet17.h"
-
-
 using std::cout;
 using std::endl;
 int main(){
-    /*
     GraafMetTakdata <GERICHT,int> gr(8);
     gr.voegVerbindingToe(1,2,7 );
     gr.voegVerbindingToe(7,1,2 );
@@ -19,21 +16,9 @@ int main(){
     gr.voegVerbindingToe(5,6,6 );
     gr.voegVerbindingToe(6,3,2 );
     gr.voegVerbindingToe(6,4,8 );
-    */
-
-    GraafMetTakdata <GERICHT,int> gr(4);
-    gr.voegVerbindingToe(0,1,7 );
-    gr.voegVerbindingToe(1,3,2 );
-    gr.voegVerbindingToe(0,2,5 );
-    gr.voegVerbindingToe(1,2,1 );
-    gr.voegVerbindingToe(2,3,6 );
-
-    gr.teken("begin.dot");
-
-
-    Stroomnetwerk<int> sn(gr,0,3);
+    Stroomnetwerk<int> sn(gr,1,4);
     sn.teken("sn.dot");
     Stroomnetwerk<int> oplossing=sn.geefStroom();
-    oplossing.teken("oplossing.dot");
-    //assert(oplossing.geefCapaciteit()==13);
+    oplossing.teken("tars.dot");
+    assert(oplossing.geefCapaciteit()==13);
 }

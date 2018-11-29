@@ -19,6 +19,6 @@ int main(){
     Stroomnetwerk<int> sn(gr,1,4);
     sn.teken("sn.dot");
     Stroomnetwerk<int> oplossing=sn.geefStroom();
-    oplossing.teken("oplossing.dot");
+    oplossing.teken("tars.dot");
     assert(oplossing.geefCapaciteit()==13);
 }
