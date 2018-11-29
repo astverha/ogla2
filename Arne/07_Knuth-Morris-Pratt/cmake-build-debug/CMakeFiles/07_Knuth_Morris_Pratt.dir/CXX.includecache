@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/07_Knuth-Morris-Pratt/knuthmorrispratt.h
+queue
+-
+vector
+-
+iostream
+-
+
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/07_Knuth-Morris-Pratt/main.cpp
+knuthmorrispratt.h
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/07_Knuth-Morris-Pratt/knuthmorrispratt.h
+iostream
+-
+

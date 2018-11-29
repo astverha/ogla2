@@ -11,12 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6f48aa-a7a7-4e31-a0d1-c5f2ea279344" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/06_Knooppunten.dir/stroomnet17.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/06_Knooppunten.dir/stroomnet17.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroomnet17.h" beforeDir="false" afterPath="$PROJECT_DIR$/stroomnet17.h" afterDir="false" />
-    </list>
+    <list default="true" id="ee6f48aa-a7a7-4e31-a0d1-c5f2ea279344" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +24,7 @@
     <session id="70413796">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.8" value="1" />
@@ -199,16 +194,15 @@
       <workItem from="1541668001766" duration="142000" />
       <workItem from="1541668384833" duration="819000" />
       <workItem from="1542871970723" duration="4878000" />
-      <workItem from="1543481353474" duration="249000" />
+      <workItem from="1543481353474" duration="368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7660000" />
+    <option name="totallyTimeSpent" value="7779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
