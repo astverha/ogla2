@@ -158,33 +158,49 @@ Stroomnetwerk(Stroomnetwerk<T>&& gr):Stroomnetwerk(0,0,0){
     }
 
     Stroomnetwerk& operator-=(const Pad<T>& vergrotendpad){
-        int capaciteit = vergrotendpad.geefCapaciteit();
+        for (int i = 1; i < vergrotendpad.size(); i++)
+        {
+            int van = vergrotendpad[i - 1];
+            int naar = vergrotendpad[i];
 
-        for (int i = 0; i < vergrotendpad.size()-1; ++i) {
-            T* takdata = this->geefTakdata(vergrotendpad[i],vergrotendpad[i+1]);
-            *takdata = *takdata - capaciteit;
+            assert(this->verbindingsnummer(van, naar) != -1);
 
-            if (this->geefTakdata(vergrotendpad[i+1], vergrotendpad[i]) == nullptr){
-                //tak bestaat nog niet
-                this->voegVerbindingToe(vergrotendpad[i+1], vergrotendpad[i], capaciteit);
-            } else {
-                T* takdata = this->geefTakdata(vergrotendpad[i+1], vergrotendpad[i]);
-                *takdata = *takdata + capaciteit;
+            T* heenstroom = this->geefTakdata(van, naar);
+
+            assert(*heenstroom >= vergrotendpad.geefCapaciteit());
+            *heenstroom -= vergrotendpad.geefCapaciteit();
+
+            if (*heenstroom == 0)
+            {
+                this->verwijderVerbinding(van, naar);
             }
-        }
 
+            this->vergrootTak(naar, van, vergrotendpad.geefCapaciteit());
+        }
         return *this;
     }
 
     Stroomnetwerk& operator+=(const Pad<T>& vergrotendpad){
-        int capaciteit = vergrotendpad.geefCapaciteit();
+        T capaciteit = vergrotendpad.geefCapaciteit();
 
-        for (int i = 0; i < vergrotendpad.size()-1; ++i) {
-            if (this->geefTakdata(vergrotendpad[i],vergrotendpad[i+1]) == nullptr){
-                this->voegVerbindingToe(vergrotendpad[i], vergrotendpad[i+1], capaciteit);
+        for (int i = 1; i < vergrotendpad.size(); ++i) {
+
+            int van = vergrotendpad[i - 1];
+            int naar = vergrotendpad[i];
+
+            if (this->verbindingsnummer(naar, van) == -1) {
+                //vergroot tak gaat de verbinding aanmaken als ze nog niet bestaat, als ze wel al bestaat gaat hij de verbinding vergorten
+                this->vergrootTak(van, naar, capaciteit);
             } else {
-                T* takdata = this->geefTakdata(vergrotendpad[i], vergrotendpad[i+1]);
-                *takdata += capaciteit;
+                T *terugstroom = this->geefTakdata(naar, van);
+                if (*terugstroom >= capaciteit) {
+                    *terugstroom -= capaciteit;
+                } else {
+                    capaciteit -= *terugstroom;
+                    *terugstroom = 0;
+                    this->vergrootTak(van, naar, capaciteit);
+                }
+
             }
         }
 

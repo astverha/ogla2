@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/06_Knooppunten/graaf.h
+/Users/tarsdj/Desktop/ogla2/Arne/06_Knooppunten/graaf.h
 cassert
 -
 fstream
@@ -32,13 +32,13 @@ stack
 exception
 -
 
-/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/06_Knooppunten/stroomnet17.cpp
+/Users/tarsdj/Desktop/ogla2/Arne/06_Knooppunten/stroomnet17.cpp
 stroomnet17.h
-/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/06_Knooppunten/stroomnet17.h
+/Users/tarsdj/Desktop/ogla2/Arne/06_Knooppunten/stroomnet17.h
 
-/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/06_Knooppunten/stroomnet17.h
+/Users/tarsdj/Desktop/ogla2/Arne/06_Knooppunten/stroomnet17.h
 graaf.h
-/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/06_Knooppunten/graaf.h
+/Users/tarsdj/Desktop/ogla2/Arne/06_Knooppunten/graaf.h
 cassert
 -
 iostream
