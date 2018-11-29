@@ -164,6 +164,7 @@ public:
     }
 
     Stroomnetwerk<T>& operator+=(Pad<T>& vergrPad){
+        // loop het vergrotend pad
         for (int i = 1; i < vergrPad.size(); i++)
         {
             int van = vergrPad[i - 1];
@@ -171,20 +172,26 @@ public:
 
             T toe_te_voegen_stroom = vergrPad.geefCapaciteit();
 
+            // als de terugverbinding niet bestaat
             if (this->verbindingsnummer(naar, van) == -1)
             {
-                this->voegVerbindingToe(van, naar, toe_te_voegen_stroom);
+                // vergroot de heenverbinding
+                this->vergrootTak(van, naar, toe_te_voegen_stroom);
             }
             else
             {
                 T* terugstroom = this->geefTakdata(naar, van);
-
+                // als de terugstroom groot genoeg is
                 if (*terugstroom >= toe_te_voegen_stroom)
                 {
+                    // trekken we de toe te voegen stroom er gewoon van af
                     *terugstroom -= toe_te_voegen_stroom;
                 }
                 else
                 {
+                    // de terugstroom is niet groot genoeg, dus trekken we de terugstroom af
+                    // van de toe te voegen stroom, dus de terugstroom wordt nul.
+                    // de heenverbinding wordt dan vermeerderd met de rest van de toe te voegen stroom
                     toe_te_voegen_stroom -= *terugstroom;
                     *terugstroom = 0;
                     this->vergrootTak(van, naar, toe_te_voegen_stroom);
@@ -195,23 +202,31 @@ public:
     }
 
     Stroomnetwerk<T>& operator-=(Pad<T>& vergrPad){
+        // loop over het vergrotend pad
         for (int i = 1; i < vergrPad.size(); i++)
         {
             int van = vergrPad[i - 1];
             int naar = vergrPad[i];
 
+            // ga na of de heenverbinding bestaat, anders abort
             assert(this->verbindingsnummer(van, naar) != -1);
 
+            // de heenstroom ophalen
             T* heenstroom = this->geefTakdata(van, naar);
 
+            // ga na of de heenstroom groot genoeg is (groter of gelijk aan capaciteit van het vergrotend pad)
+            // PER DEFINITIE ALTIJD ZO
             assert(*heenstroom >= vergrPad.geefCapaciteit());
+            // dan verminder je de heenstroom met die capaciteit
             *heenstroom -= vergrPad.geefCapaciteit();
 
+            // als de heenstroom nul wordt, dan kan je de heenverbinding verwijderen
             if (*heenstroom == 0)
             {
                 this->verwijderVerbinding(van, naar);
             }
 
+            // de terugverbinding wordt dan vergroot met de capaciteit van het vergrotend pad
             this->vergrootTak(naar, van, vergrPad.geefCapaciteit());
         }
         return *this;

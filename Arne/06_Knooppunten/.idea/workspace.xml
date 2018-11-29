@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee6f48aa-a7a7-4e31-a0d1-c5f2ea279344" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
@@ -44,6 +45,12 @@
       <change beforePath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/cmake-build-debug/sn.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/cmake-build-debug/sn.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/stroomnet17.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tars/Fietsnetwerk/stroomnet17.h" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/06_Knooppunten" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/06_Knooppunten.dir/stroomnet17.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/06_Knooppunten.dir/stroomnet17.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroomnet17.h" beforeDir="false" afterPath="$PROJECT_DIR$/stroomnet17.h" afterDir="false" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,16 +64,17 @@
     <session id="70413796">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="3" />
+          <entry key="dot" value="1" />
           <entry key="h" value="2" />
           <entry key="txt" value="2" />
         </counts>
@@ -75,19 +83,20 @@
         <counts>
           <entry key="CMakeLists.txt" value="2" />
           <entry key="ObjectiveC" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="89" />
-          <entry key="h" value="666" />
+          <entry key="h" value="1593" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="2" />
-          <entry key="ObjectiveC" value="755" />
+          <entry key="ObjectiveC" value="1682" />
         </counts>
       </usages-collector>
     </session>
@@ -118,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stroomnet17.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="175" column="40" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
+            <state relative-caret-position="195">
+              <caret line="217" column="38" selection-start-line="217" selection-start-column="38" selection-end-line="217" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -127,8 +136,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stroomnet17.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+=======
+            <state relative-caret-position="315">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
             </state>
           </provider>
         </entry>
@@ -172,6 +186,11 @@
             <path>
               <item name="06_Knooppunten" type="b2602c69:ProjectViewProjectNode" />
               <item name="06_Knooppunten" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="06_Knooppunten" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_Knooppunten" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,19 +248,32 @@
       <workItem from="1541666168124" duration="540000" />
       <workItem from="1541668001766" duration="142000" />
       <workItem from="1541668384833" duration="819000" />
+<<<<<<< HEAD
       <workItem from="1542871970723" duration="2624000" />
       <workItem from="1542876435111" duration="143000" />
+=======
+      <workItem from="1542871970723" duration="4878000" />
+      <workItem from="1543481353474" duration="249000" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5300000" />
+=======
+    <option name="totallyTimeSpent" value="7660000" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="975" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26678878" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -278,6 +310,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leesfiets.cpp" />
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/oplossing.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
     <entry file="file://$PROJECT_DIR$/graaf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
@@ -290,15 +332,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stroomnet17.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="133">
           <caret line="175" column="40" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
+=======
+        <state relative-caret-position="315">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stroomnet17.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="255">
           <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+=======
+        <state relative-caret-position="195">
+          <caret line="217" column="38" selection-start-line="217" selection-start-column="38" selection-end-line="217" selection-end-column="38" />
+>>>>>>> bf2359d0f59632b9efbdbe367cd3567a85af849a
         </state>
       </provider>
     </entry>
