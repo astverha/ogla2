@@ -9,6 +9,9 @@ using namespace std;
 class KnuthMorrisPratt{
 	
 public:
+
+    const uchar* naald;
+
 	vector<int> kmptabel;
 	
     KnuthMorrisPratt(const uchar* naald,uint _naaldlengte);
@@ -25,6 +28,7 @@ public:
 KnuthMorrisPratt::KnuthMorrisPratt(const uchar* naald,uint _naaldlengte){
 	this->kmptabel.resize(_naaldlengte);
 	this->computeKmpTabel(naald, _naaldlengte);
+	this->naald = naald;
 }
     
 // Prefixfunctie (als de return value gelijk wordt aan de naaldlengte is het patroon gevonden)
@@ -45,59 +49,43 @@ void KnuthMorrisPratt::computeKmpTabel(const uchar* naald, uint _naaldlengte){
 	}
 }
 
-std::queue<int> KnuthMorrisPratt::zoek(const std::string& hooiberg, std::vector<int> tabel) const
+std::queue<int> KnuthMorrisPratt::zoek(std::queue<const uchar*>& plaats,
+                                       const uchar* hooiberg, uint hooiberglengte) const {
 
-{
-
-    if (hooiberg.empty())
-
-    {
+    if (hooiberglengte <= 0) {
 
         return std::queue<int>{};
 
     }
 
-
-
     // int aantal = 0; // DEBUG
-
-
 
     std::queue<int> gevonden;
 
 
-
     int prefix_lengte = 0;
 
-    for (size_t i = 1; i <= hooiberg.size(); i++) // Let op de <= in de for-voorwaarde! bv. "aba" zoeken in "ababa"
+    for (size_t i = 1; i <= hooiberglengte; i++) // Let op de <= in de for-voorwaarde! bv. "aba" zoeken in "ababa"
 
     {
 
-        while ((prefix_lengte >= 0) && (hooiberg[i - 1] != naald[prefix_lengte]))
+        while ((prefix_lengte >= 0) && (hooiberg[i - 1] != naald[prefix_lengte])) {
 
-        {
-
-            prefix_lengte = tabel[prefix_lengte];
+            prefix_lengte = kmptabel[prefix_lengte];
 
             // aantal++; // DEBUG
 
         }
 
-
-
         prefix_lengte++;
-
-
 
         assert(prefix_lengte <= std::numeric_limits<int>::max());
 
-        if (prefix_lengte == static_cast<int>(naald.size()))
-
-        {
+        if (prefix_lengte == static_cast<int>(naald.size())) {
 
             gevonden.push(i - naald.size());
 
-            prefix_lengte = tabel[prefix_lengte]; // Is dit nodig? Zie CLRS
+            prefix_lengte = kmptabel[prefix_lengte]; // Is dit nodig? Zie CLRS
 
         }
 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tarsdj/Desktop/ogla2/Tars/KMP/knuthmorrispratt.h
+queue
+-
+vector
+-
+iostream
+-
+
+/Users/tarsdj/Desktop/ogla2/Tars/KMP/main.cpp
+knuthmorrispratt.h
+/Users/tarsdj/Desktop/ogla2/Tars/KMP/knuthmorrispratt.h
+iostream
+-
+

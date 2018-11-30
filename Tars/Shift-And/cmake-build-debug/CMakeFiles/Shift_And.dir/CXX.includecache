@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/bitpatroon.h
+iostream
+-
+
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/main.cpp
+iostream
+-
+bitpatroon.h
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/bitpatroon.h
+shiftand.h
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/shiftand.h
+string
+-
+queue
+-
+array
+-
+
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/shiftand.h
+bitpatroon.h
+/Users/tarsdj/Desktop/ogla2/Tars/Shift-And/bitpatroon.h
+queue
+-
+
