@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/bitpatroon.h
+iostream
+-
+
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/main.cpp
+iostream
+-
+shiftand.h
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/shiftand.h
+
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/shiftand.h
+bitpatroon.h
+/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/bitpatroon.h
+queue
+-
+
