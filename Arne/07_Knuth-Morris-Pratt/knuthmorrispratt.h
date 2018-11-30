@@ -16,8 +16,7 @@ public:
     // Prefixfunctie
     void computeKmpTabel(const uchar* naald, uint _naaldlengte);
 
-    void zoek(std::queue<const uchar*>& plaats,
-              const uchar* hooiberg, uint hooiberglengte);
+    void zoek(queue<const uchar*>& plaats, const uchar* hooiberg, uint hooiberglengte);
 
 };
 
@@ -45,14 +44,13 @@ void KnuthMorrisPratt::computeKmpTabel(const uchar* naald, uint _naaldlengte){
     }
 }
 
-std::queue<int> KnuthMorrisPratt::zoek(const std::string& hooiberg, std::vector<int> tabel) const
-{
+void KnuthMorrisPratt::zoek(queue<const uchar *> &plaats, const uchar *hooiberg, uint hooiberglengte) {
     if (hooiberg.empty()) {
-        return std::queue<int>{};
+        plaats =  queue<const uchar*>{};
     }
 
     // int aantal = 0; // DEBUG
-    std::queue<int> gevonden;
+    std::queue<const uchar*> gevonden;
     int prefix_lengte = 0;
     for (size_t i = 1; i <= hooiberg.size(); i++) // Let op de <= in de for-voorwaarde! bv. "aba" zoeken in "ababa"
     {
@@ -71,5 +69,5 @@ std::queue<int> KnuthMorrisPratt::zoek(const std::string& hooiberg, std::vector<
     }
     // std::cout << "aantal:" << aantal << std::endl; // DEBUG
 
-    return gevonden;
+    plaats =  gevonden;
 }
