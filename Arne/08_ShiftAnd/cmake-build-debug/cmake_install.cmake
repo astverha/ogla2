@@ -1,4 +1,4 @@
-# Install script for directory: /Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd
+# Install script for directory: /Users/zaidie/school/algo/ogla2/Arne/08_ShiftAnd
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/zaidie/school/algo/ogla2/Arne/08_ShiftAnd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
