@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tarsdj/Desktop/ogla2/Tars/Kerstmis/bitpatroon.h
+iostream
+-
+
+/Users/tarsdj/Desktop/ogla2/Tars/Kerstmis/main.cpp
+iostream
+-
+fstream
+-
+streambuf
+-
+suffixboom17.h
+/Users/tarsdj/Desktop/ogla2/Tars/Kerstmis/suffixboom17.h
+
+/Users/tarsdj/Desktop/ogla2/Tars/Kerstmis/suffixboom17.h
+cassert
+-
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+map
+-
+cstring
+-
+deque
+-
+memory
+-
+bitpatroon.h
+/Users/tarsdj/Desktop/ogla2/Tars/Kerstmis/bitpatroon.h
+
