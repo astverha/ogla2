@@ -9,10 +9,12 @@ using namespace std;
 
 int main() {
 
-    std::ifstream t("file.txt");
-    std::string str((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
+    cout << "Hello world!" << endl;
 
-    Sboom boomken;
-    boomken.voegtoe(str, '#');
+    ifstream t("file.txt");
+    string str((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
+
+    Sboom sboom;
+    sboom.voegtoe(str, '#');
 
 }

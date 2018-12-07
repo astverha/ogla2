@@ -12,39 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db1a1a2c-92a1-47a2-bb5c-d4fb360a9825" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../08_ShiftAnd/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/ShiftAnd.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/ShiftAnd.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08_ShiftAnd/shiftand.h" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ShiftAnd/shiftand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suffixboom17.h" beforeDir="false" afterPath="$PROJECT_DIR$/suffixboom17.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,25 +25,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+        <entry file="file://$PROJECT_DIR$/suffixboom17.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="-40">
+              <caret line="220" column="7" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/suffixboom17.h">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5205">
-              <caret line="347" column="40" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="40" />
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +59,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/suffixboom17.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/suffixboom17.h" />
       </list>
     </option>
   </component>
@@ -127,6 +94,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -167,15 +135,16 @@
       <option name="presentableId" value="Default" />
       <updated>1544081464043</updated>
       <workItem from="1544081466095" duration="4668000" />
-      <workItem from="1544187927713" duration="12000" />
+      <workItem from="1544187927713" duration="635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4680000" />
+    <option name="totallyTimeSpent" value="5303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -206,17 +175,20 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/suffixboom17.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5205">
-          <caret line="347" column="40" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/suffixboom17.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="-40">
+          <caret line="220" column="7" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
         </state>
       </provider>
     </entry>

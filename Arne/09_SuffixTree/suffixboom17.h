@@ -45,7 +45,7 @@ class Sboom;
 
 typedef map<char, unique_ptr<Sknoop>> Kindtype;
 typedef unsigned char uchar;
-class Kindtab: public Kindtype{
+class Kindtab: public Kindtype {
 public:
     void set(char a, unique_ptr<Sknoop>&& p);
     //geeft nulpointer terug als a geen beeld heeft in de map
@@ -72,25 +72,38 @@ public:
    ofwel in een impliciete knoop die als expliciete ouder *expliciet heeft.
    
 ***************************************************************************/
-class Presuffix{
+class Presuffix {
     friend class Sboom;
 public:
+    // Constructor presuffix
     Presuffix(InwendigeKnoop* _expliciet=0, int _plaats=0);
+
+    // Init presuffix
     void init(InwendigeKnoop* _expliciet=0, int _plaats=0);
+
+    // Verzet
     void verzet();
-    //noot explicietEinde werkt alleen als het Presuffix canonisch van vorm is
+
+    // noot explicietEinde werkt alleen als het Presuffix canonisch van vorm is
     bool explicietEinde(int i) const{
         return lengteTotExpliciet ==i-plaatsInHooiberg;
     };
+
     //volgende functie ontploft (soms) als knoopwijzer niet canonisch is
     bool heeftKind(int i, const string& hooiberg) const;
+
     //als het stuk van plaatsInHooiberg tot i gekend is,
     //ga zo ver mogelijk naar beneden in de boom
     void maakCanoniek(int i, const string& hooiberg);
+
+    // Checken of presuffix canoniek is
     bool isCanoniek(int i,  const string& hooiberg) const;
+
+    // Geef de plaats in de hooiberg van de presuffix
     int geefPlaatsInHooiberg(){return plaatsInHooiberg;};
+
 protected:
-//lidvelden
+    // member fields
     InwendigeKnoop* expliciet;//laatste expliciete knoop, voor zover bekend, in pad van suffix.
     int plaatsInHooiberg;
     int lengteTotExpliciet;//lengte van string die tot expliciete knoop leidt. 0 als Expliciet naar wortel leidt
@@ -126,8 +139,12 @@ class Sknoop{
 friend class Sboom;
 friend class Presuffix;
 public:
+    // Default constructor Sknoop
     Sknoop();
+
+    // Checkt of Sknoop een leaf node is
     virtual bool isBlad()=0;
+
     //de volgende functie vult niet alleen knoopverzameling in, de verzameling teksten (gegeven als bitpatroon)
     //die horen bij bladeren onder de knoop, maar ook uit: als een knoop merkt dat hij bladeren onder
     //zich heeft voor alle bestanden in gezocht en zijn padstring is langer dan uit, dan vult hij uit in.
@@ -141,6 +158,7 @@ public:
                     string& uit,int diepte,const Bitpatroon& gezocht,
                      const string& hooiberg)=0;
 protected:
+    // member fields
     int startp; //p staat voor prefix: startp en eindp duiden begin en einde aan in hooiberg van prefix
     int eindp;  //nuttig voor toepassingen zoals lgd
     int startc; //zie uitleg bij klasse
@@ -149,10 +167,13 @@ protected:
 
 };
 
-class Blad: public Sknoop{
+class Blad: public Sknoop {
 friend class Sboom;
 public:
+    // Checkt of Blad een leaf node is
     virtual bool isBlad();
+
+    // Recursieve versie om de langste gemeenschappelijke deelstring te krijgen
     virtual void geefLGDrec(const vector<Bitpatroon> &sluitmap ,Bitpatroon&  knoopverzameling,
                     string& uit,int diepte,const Bitpatroon& gezocht,
                      const string& hooiberg);
@@ -160,17 +181,22 @@ public:
 
 
 
-class InwendigeKnoop: public Sknoop{
+class InwendigeKnoop: public Sknoop {
 friend class Sboom;
 friend class Presuffix;
 public:
+    // Default constructor InwendigeKnoop
     InwendigeKnoop();
+
+    // Checkt of InwendigeKnoop een leaf node is
     virtual bool isBlad();
+
+    // Recursieve versie om de langste gemeenschappelijke deelstring te krijgen
     virtual void geefLGDrec(const vector<Bitpatroon> &sluitmap ,Bitpatroon&  knoopverzameling,
                     string& uit,int diepte,const Bitpatroon& gezocht,
                      const string& hooiberg);
 protected:
-//datavelden
+    // member fields
     Kindtab kind;
     InwendigeKnoop* staart;
 };
@@ -186,20 +212,22 @@ protected:
    geldige suffix is van een willekeurige string en dus steeds aanwezig is.
    
 ***************************************************************************/
-class Sboom{
+class Sboom {
 public:
+    // Default constructor Sboom
     Sboom();
-    //voegtoe voegt een tekst toe met het opgegeven afsluitkarakter
-    //Verschillende teksten moeten verschillende afsluitkarakters hebben!
+
+    // voegtoe voegt een tekst toe met het opgegeven afsluitkarakter
+    // Verschillende teksten moeten verschillende afsluitkarakters hebben!
     void voegtoe (const string& s, char afsluiter=-1);
 
-    //geefLGD geeft de langste gemeenschappelijke deelstring van alle teksten
-    //met de opgegeven afsluitkarakters.
+    // geefLGD geeft de langste gemeenschappelijke deelstring van alle teksten
+    // met de opgegeven afsluitkarakters.
     string geefLGD(const vector<char>& sluit) const;
 protected:
-    //datavelden
-    string hooiberg;//let op: afgesloten met afsluitkarakter
-    int lengte;//lengte van de hooiberg.
+    // member fields
+    string hooiberg;    // let op: afgesloten met afsluitkarakter
+    int lengte;         // lengte van de hooiberg.
     unique_ptr<InwendigeKnoop> wortel;
 };
 
@@ -218,7 +246,7 @@ protected:
 *********************************************************************/
 void Presuffix::verzet(){
     plaatsInHooiberg++;
-    if (lengteTotExpliciet > 0)//we zitten niet in wortel
+    if (lengteTotExpliciet > 0) //we zitten niet in wortel
         lengteTotExpliciet--;
     expliciet=expliciet->staart;
 };
