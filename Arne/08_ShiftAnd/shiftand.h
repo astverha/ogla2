@@ -6,7 +6,7 @@ using namespace std;
 typedef unsigned int uint;
 typedef unsigned char uchar;
 
-class Shiftand{
+class Shiftand {
 public:
     //naaldlengte moet kleiner zijn dan patroonlengte, anders wordt een exceptie opgegooid.
     Shiftand(const uchar* naald, uint _naaldlengte);

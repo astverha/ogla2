@@ -1,0 +1,3 @@
+/Users/zaidie/school/algo/ogla2/Arne/09_SuffixTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zaidie/school/algo/ogla2/Arne/09_SuffixTree/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zaidie/school/algo/ogla2/Arne/09_SuffixTree/cmake-build-debug/CMakeFiles/Kerstmis.dir

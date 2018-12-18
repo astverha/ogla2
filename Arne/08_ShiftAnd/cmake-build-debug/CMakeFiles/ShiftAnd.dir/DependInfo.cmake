@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/main.cpp" "/Users/arneverhaeghe/Documents/0School/IW4/Semester1/AlgoritmenII/git/ogla2/Arne/08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/main.cpp.o"
+  "/Users/zaidie/school/algo/ogla2/Arne/08_ShiftAnd/main.cpp" "/Users/zaidie/school/algo/ogla2/Arne/08_ShiftAnd/cmake-build-debug/CMakeFiles/ShiftAnd.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
