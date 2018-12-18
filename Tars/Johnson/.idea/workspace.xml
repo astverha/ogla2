@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd3b598-d89e-4831-95f4-2a561c116efe" name="Default Changelist" comment="" />
+    <list default="true" id="edd3b598-d89e-4831-95f4-2a561c116efe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Floyd-Warshall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Floyd-Warshall/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +26,7 @@
     <session id="-801938347">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -172,7 +175,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1459" y="-247" width="1874" height="1012" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -185,7 +187,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1597826" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1597826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
