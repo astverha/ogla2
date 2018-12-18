@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
 
-    std::ifstream t("file.txt");
+    std::ifstream t("TheChimes");
     std::string str((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
 
     Sboom boomken;
