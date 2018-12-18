@@ -27,29 +27,24 @@ void geefAlleKortsteAfstanden(GraafMetTakdata<GERICHT,int> graaf)
 
 	queue<int> q;
 	q.push(nieuweKnoop);
+	//next_iter_q = queue<int>();
 
-	// Doe n-1 keer
-	for (int i = 0; i < graaf.aantalKnopen() - 1; i++)
+	while (!q.empty())
 	{
-		//next_iter_q = queue<int>();
-		// Diepte eerst zoeken
-		while (!q.empty())
-		{
-			// Haal volgende knoop op
-			int huidig = q.front();
-			q.pop();
+		// Haal volgende knoop op
+		int huidig = q.front();
+		q.pop();
 
-			// Overloop zijn buren
-			const typename Graaf<GERICHT>::Burenlijst& burenlijst=graaf[huidig];
-			for (typename Graaf<GERICHT>::Burenlijst::const_iterator it = burenlijst.begin(); it != burenlijst.end(); it++)
+		// Overloop zijn buren
+		const typename Graaf<GERICHT>::Burenlijst& burenlijst=graaf[huidig];
+		for (typename Graaf<GERICHT>::Burenlijst::const_iterator it = burenlijst.begin(); it != burenlijst.end(); it++)
+		{
+			// Als de afstand korter is geworden, pas de waarde dan aan in de map
+			if (*graaf.geefTakdata(huidig, it->first) + kortste_afstanden[huidig] < kortste_afstanden[it->first])
 			{
-				// Als de afstand korter is geworden, pas de waarde dan aan in de map
-				if (*graaf.geefTakdata(huidig, it->first) + kortste_afstanden[huidig] < kortste_afstanden[it->first])
-				{
-					kortste_afstanden[it->first] = *graaf.geefTakdata(huidig, it->first) + kortste_afstanden[huidig];
-					// Als deze buur dus de kortste afstand korter heeft gemaakt, zet deze dan op de lijst om te gebruiken bij de volgende iteratie
-					q.push(it->first);
-				}
+				kortste_afstanden[it->first] = *graaf.geefTakdata(huidig, it->first) + kortste_afstanden[huidig];
+				// Als deze buur dus de kortste afstand korter heeft gemaakt, zet deze dan op de lijst om te gebruiken bij de volgende iteratie
+				q.push(it->first);
 			}
 		}
 	}
