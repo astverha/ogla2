@@ -12,12 +12,11 @@ vector<vector<int>> men = {
 };
 
 vector<vector<int>> women = {
-	{ 0,3,4,2,1 },
-	{ 4,2,1,3,0 },
-	{ 0,1,2,3,4 },
-	{ 4,3,2,1,0 },
-	{ 4,2,3,1,0 },
-	}
+		{ 0,3,4,2,1 },
+		{ 4,2,1,3,0 },
+		{ 0,1,2,3,4 },
+		{ 4,3,2,1,0 },
+		{ 4,2,3,1,0 },
 };
 
 vector<vector<int>> women_men_indexed(women.size(), vector<int>(men.size())); // women_men_indexed[woman][man] = "index van man in women tabel"
@@ -39,7 +38,7 @@ void doeAanzoek(int i){
 		}
 		else
 		{
-				// Anders wanneer de vrouw liever bij haar huidige man blijft bepalen we de volgende potentïële bruid
+				// Anders wanneer de vrouw liever bij haar huidige man blijft bepalen we de volgende potentï¿½ï¿½le bruid
 				if(women_men_indexed[potential_bride][partner_of_women[potential_bride]] < women_men_indexed[potential_bride][i])
 				{
 					partner_of_men[i]= potential_bride;
