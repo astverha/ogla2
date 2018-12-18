@@ -11,10 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f702e0bd-8f22-4aae-a0d5-d514b0dd2831" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Johnson/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Johnson/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Johnson/Johnson.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Johnson/Johnson.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="f702e0bd-8f22-4aae-a0d5-d514b0dd2831" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Warshall.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -165,12 +162,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545139547954</updated>
-      <workItem from="1545139549597" duration="256000" />
+      <workItem from="1545139549597" duration="475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256000" />
+    <option name="totallyTimeSpent" value="475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1459" y="-247" width="1874" height="1012" extended-state="0" />
@@ -217,8 +214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Warshall.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="450">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
